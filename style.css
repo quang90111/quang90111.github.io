@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+}
+
+.profile {
+  width: 25%;
+  background-color: #2196f3; /* Blue */
+  padding: 20px;
+  color: white;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.profile-content {
+  height: calc(100% - 40px); /* Subtracting padding to avoid overflow */
+}
+
+.content {
+  width: 75%;
+  padding: 20px;
+  margin-left: 30%; /* Added margin to push content column */
+  height: 100%;
+  overflow-y: auto;
+}
+
+.profile img {
+  width: 100%;
+  height: auto;
+}
+
+.profile h2 {
+  margin-top: 10px;
+}
+
+.profile p {
+  margin-bottom: 10px;
+}
+
+.profile .icon {
+  margin-right: 5px;
+}
+
+.icon-c {
+  color: #f44336; /* Red */
+}
+
+.icon-csharp {
+  color: #2196f3; /* Blue */
+}
+
+.icon-python {
+  color: #4caf50; /* Green */
+}
+
+.icon-java {
+  color: #ff9800; /* Orange */
+}
+
+.icon-js {
+  color: #ffc107; /* Yellow */
+}
+
+.icon-html {
+  color: #9c27b0; /* Purple */
+}
+
+.education,
+.skills {
+  margin-bottom: 20px;
+}
+
+/* Adjusted CSS for image resizing */
+.content img {
+  max-width: 100%;
+  max-height: 250px; /* Adjust the height as needed */
+  object-fit: contain;
+}

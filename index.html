@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Trang cá nhân</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -15,13 +16,24 @@
 
     .profile {
       width: 25%;
-      background-color: #f0f0f0;
+      background-color: #2196f3; /* Blue */
       padding: 20px;
+      color: white;
+      position: fixed;
+      height: 100%;
+      overflow-y: auto;
+    }
+    
+    .profile-content {
+      height: calc(100% - 40px); /* Subtracting padding to avoid overflow */
     }
 
     .content {
       width: 75%;
       padding: 20px;
+      margin-left: 30%; /* Added margin to push content column */
+      height: 100%;
+      overflow-y: auto;
     }
 
     .profile img {
@@ -36,19 +48,99 @@
     .profile p {
       margin-bottom: 10px;
     }
+
+    .profile .icon {
+      margin-right: 5px;
+    }
+
+    .icon-c {
+      color: #f44336; /* Red */
+    }
+
+    .icon-csharp {
+      color: #2196f3; /* Blue */
+    }
+
+    .icon-python {
+      color: #4caf50; /* Green */
+    }
+
+    .icon-java {
+      color: #ff9800; /* Orange */
+    }
+
+    .icon-js {
+      color: #ffc107; /* Yellow */
+    }
+
+    .icon-html {
+      color: #9c27b0; /* Purple */
+    }
+
+    .education,
+    .skills {
+      margin-bottom: 20px;
+    }
+
+    /* Adjusted CSS for image resizing */
+    .content img {
+      max-width: 100%;
+      max-height: 250px; /* Adjust the height as needed */
+      object-fit: contain;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="profile">
-      <img src="path_to_your_profile_image.jpg" alt="Profile Picture">
-      <h2>Tên người dùng</h2>
-      <p>Địa chỉ email: example@example.com</p>
-      <p>Số điện thoại: 123456789</p>
-      <!-- Thêm thông tin cá nhân khác tại đây -->
+      <div class="profile-content">
+        <img src="image/avatar.png" alt="Profile Picture">
+        <h2>Phan Minh Quang</h2>
+        <div style="text-align: center;">
+          <a href="cvPhanMinhQuang.pdf">Resume</a> | 
+          <a href="https://github.com/quang90111">Github</a>
+        </div>
+        <p><i class="fas fa-envelope icon"></i>quangphanminh0@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt icon"></i>8/67 Tan Hoa, Phuong 1, Quan 11</p>
+        <p><i class="fas fa-phone-alt icon"></i>0776606129</p>
+      </div>
     </div>
     <div class="content">
-      <!-- Nội dung trang cá nhân -->
+      <h3>Education</h3>
+      <div class="education">
+        <p>Sai Gon University</p>
+        <p>2020-now</p>
+        <p>Information Technology</p>
+        <p>Current GPA: 2.34/4.0</p>
+      </div>
+
+      <h3>Skills</h3>
+      <div class="skills">
+        <p>
+          <i class="fab fa-cuttlefish icon-c"></i>C/C++,
+          <i class="fab fa-cuttlefish icon-csharp"></i>C#,
+          <i class="fab fa-python icon-python"></i>Python,
+          <i class="fab fa-java icon-java"></i>Java,
+          <i class="fab fa-js-square icon-js"></i>JavaScript/TypeScript,
+          <i class="fab fa-html5 icon-html"></i>HTML/CSS.
+        </p>
+      </div>
+
+      <h3>Projects</h3>
+      <ul>
+        <li><strong>FastFoodStore | Java</strong>
+          <br>
+          <img src="image/project1/img1.png" alt="FastFoodStore - Image 1" style="max-height: 250px;">
+          <img src="image/project1/img2.png" alt="FastFoodStore - Image 2" style="max-height: 250px;">
+        </li>
+        <li><strong>Toys StoreĐây là phần tiếp theo của mã HTML hoàn chỉnh:
+
+```html
+          | C#</strong>
+          <br>
+          <img src="image/project2.png" alt="Toys Store - Image 1" style="max-height: 250px;">
+        </li>
+      </ul>
     </div>
   </div>
 </body>
